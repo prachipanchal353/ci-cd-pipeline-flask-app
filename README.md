@@ -1,20 +1,27 @@
-# GitHub-Actions
-Repository to kick start your journey with GitHub Actions
+# CI/CD Pipeline with GitHub Actions, Docker & AWS EC2
 
-## Comparing with Jenkins 
+This project demonstrates a production-ready CI/CD pipeline that:
 
-### Advantages of GitHub Actions over Jenkins
+- Builds a Flask app
+- Uses GitHub Actions for CI/CD
+- Dockerizes the app
+- Pushes the image to DockerHub
+- Deploys on AWS EC2 via SSH
 
-- Hosting: Jenkins is self-hosted, meaning it requires its own server to run, while GitHub Actions is hosted by GitHub and runs directly in your GitHub repository.
+## Tools Used
 
-- User interface: Jenkins has a complex and sophisticated user interface, while GitHub Actions has a more streamlined and user-friendly interface that is better suited for simple to moderate automation tasks.
+- GitHub Actions
+- Docker & DockerHub
+- Python Flask
+- AWS EC2
+- Secrets & SSH
 
-- Cost: Jenkins can be expensive to run and maintain, especially for organizations with large and complex automation needs. GitHub Actions, on the other hand, is free for open-source projects and has a tiered pricing model for private repositories, making it more accessible to smaller organizations and individual developers.
+## My Role
 
-### Advantages of Jenkins over GitHub Actions
+As a DevOps Engineer, I designed the CI/CD workflow, created Docker containers, and automated deployment on EC2.
 
-- Integration: Jenkins can integrate with a wide range of tools and services, but GitHub Actions is tightly integrated with the GitHub platform, making it easier to automate tasks related to your GitHub workflow.
+## Run the App Locally
 
-In conclusion, Jenkins is better suited for complex and large-scale automation tasks, while GitHub Actions is a more cost-effective and user-friendly solution for simple to moderate automation needs.
-
-
+```bash
+docker build -t flask-app .
+docker run -d -p 5000:5000 flask-app
